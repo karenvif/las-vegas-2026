@@ -31,6 +31,26 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 .fee-warning{font-size:.7rem;line-height:1.4;opacity:.62;margin-top:10px}
 </style>
 
+
+<style id="final-cleanup-styles">
+.cost-legend{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin:18px 0 20px;
+}
+.cost-legend>div{
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.045);
+}
+.cost-legend strong{display:block;font-size:.82rem;margin-bottom:4px}
+.cost-legend span{display:block;font-size:.72rem;line-height:1.35;opacity:.7}
+@media(max-width:800px){.cost-legend{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cost-legend{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
 <header class="hero"><div class="sparkles"></div><div class="container hero-content">
@@ -64,25 +84,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Fuera del Strip</b></div><div class="detail">💳 Resort fee<b>US$41.00/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$6,096</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$6,096</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$41.00 × 2 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$41.00 × 2 hab. × 2 noches</small></span>
         <span>$3,034</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$406</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$816</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$1,222</span>
       </div>
 
@@ -98,7 +118,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$93</span></div>
 
       <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/416557/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1176064685&amp;searchId=5adcec3d-10e0-46f8-9341-99f4f07957ab&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -111,25 +131,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Fuera del Strip</b></div><div class="detail">💳 Resort fee<b>US$41.00/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$8,086</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$8,086</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$41.00 × 3 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$41.00 × 3 hab. × 2 noches</small></span>
         <span>$4,551</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$609</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$1,082</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$1,691</span>
       </div>
 
@@ -145,7 +165,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$129</span></div>
 
       <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/416557/2026-11-06/2026-11-08/3!3?user_searched_gid=CIT_3944&amp;selected_room_pack=2020394738&amp;searchId=432bc416-2d49-47a1-8505-bf8b7010c2fd&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -158,25 +178,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>7.0 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Strip</b></div><div class="detail">🎢 Extra<b>Theme Park</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$8,448</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$8,448</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$45.00 × 2 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 2 hab. × 2 noches</small></span>
         <span>$3,330</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$446</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$1,130</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$1,576</span>
       </div>
 
@@ -192,7 +212,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$120</span></div>
 
       <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="http://bestday.com.mx/accommodations/detail/270357/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=315423910&amp;searchId=dc9036ca-dcce-4cc7-aa26-66de8835d4fa&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -205,25 +225,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>8.4 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Excelente</b></div><div class="detail">💳 Resort fee<b>US$49.95/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$11,426</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$11,426</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$49.95 × 3 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$49.95 × 3 hab. × 2 noches</small></span>
         <span>$5,544</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$742</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$1,529</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,271</span>
       </div>
 
@@ -239,7 +259,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$173</span></div>
 
       <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/2457529/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1040142138&amp;searchId=95ee21f3-8733-491c-b332-ccb1ca10192e&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -252,25 +272,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★★</span><strong>8.6 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🚝 Transporte<b>Monorail</b></div><div class="detail">💳 Resort fee<b>US$54.95/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$11,460</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$11,460</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$54.95 × 2 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$54.95 × 2 hab. × 2 noches</small></span>
         <span>$4,066</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$544</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$1,533</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,077</span>
       </div>
 
@@ -286,7 +306,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$159</span></div>
 
       <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/651043/2026-11-06/2026-11-08/3!3?user_searched_gid=CIT_3944&amp;selected_room_pack=2092168877&amp;searchId=13dbb8ce-424d-4354-868e-8d7d0312c3ed&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -299,25 +319,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★★</span><strong>9.2 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🏠 Tipo<b>Suites</b></div><div class="detail">💳 Resort fee<b>US$45.00/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$12,762</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$12,762</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$45.00 × 2 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 2 hab. × 2 noches</small></span>
         <span>$3,330</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$446</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$1,708</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,153</span>
       </div>
 
@@ -333,7 +353,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$164</span></div>
 
       <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/312474/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1722588014&amp;searchId=ea5d5bac-c3e5-4ddd-bfca-6c0dacc3cab8&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -346,25 +366,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>7.8 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>$20 USD/noche</b></div><div class="detail">📍 Ubicación<b>Strip</b></div><div class="detail">💳 Resort fee<b>US$45.00/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$15,377</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,377</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$45.00 × 3 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 3 hab. × 2 noches</small></span>
         <span>$4,995</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$668</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$2,057</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,726</span>
       </div>
 
@@ -380,7 +400,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$215</span></div>
 
       <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="http://bestday.com.mx/accommodations/detail/269312/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1859630021&amp;searchId=681806f7-04f9-43c4-b1ba-72e785c23a38&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -393,25 +413,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🔞 Concepto<b>Adults only</b></div><div class="detail">🏊 Alberca<b>Exterior</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$15,975</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,975</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$30.00 × 3 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$30.00 × 3 hab. × 2 noches</small></span>
         <span>$3,330</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$446</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$2,137</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,583</span>
       </div>
 
@@ -427,7 +447,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$197</span></div>
 
       <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="http://bestday.com.mx/accommodations/detail/456935/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1519602105&amp;searchId=0034d430-acc4-4375-a99c-376e1ba64581&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
@@ -440,25 +460,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
     <div class="rating"><span class="stars">★★★★★</span><strong>8.6 / 10</strong></div>
     <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🚝 Transporte<b>Monorail</b></div><div class="detail">💳 Resort fee<b>US$54.95/hab./noche</b></div></div>
     <div class="price-box">
-      <div class="price-row"><span>Hospedaje cotizado · BestDay</span><span class="total quoted">$15,982</span></div>
+      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,982</span></div>
 
       <div class="price-row fee-detail">
-        <span>Resort fee estimado<small>US$54.95 × 3 hab. × 2 noches</small></span>
+        <span>Resort fee · estimado a pagar en hotel<small>US$54.95 × 3 hab. × 2 noches</small></span>
         <span>$6,099</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Impuesto sobre resort fee<small>13.38% del resort fee</small></span>
+        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
         <span>$816</span>
       </div>
 
       <div class="price-row tax-detail">
-        <span>Reserva impuesto local hospedaje<small>13.38% del precio BestDay · solo si no estuviera incluido</small></span>
+        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
         <span>$2,138</span>
       </div>
 
       <div class="price-row tax-subtotal">
-        <span>Total de impuestos reservados</span>
+        <span>Total reservado para impuestos</span>
         <span>$2,954</span>
       </div>
 
@@ -474,7 +494,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
       <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$226</span></div>
 
       <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* Presupuesto conservador: si BestDay ya incluyó el impuesto local del hospedaje, el total real sería menor.</div>
+      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
     </div>
     <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/651043/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=2106050918&amp;searchId=642ebb7b-8bf7-487c-9983-b33841388ff8&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
   </div>
