@@ -46,6 +46,18 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 }
 </style>
 
+
+<style id="budget-v3-styles">
+.clarity-box{max-width:900px;margin:0 auto 22px;padding:16px 18px;border-radius:14px;background:#fff8e8;border:1px solid #ead9a8;font-size:.84rem;line-height:1.5}
+.clarity-box p{margin:6px 0 0}
+.fee-row{background:rgba(0,0,0,.012)}
+.tax-row{background:rgba(0,0,0,.022)}
+.tax-summary{display:flex;justify-content:space-between;gap:14px;margin-top:12px;padding:10px 12px;border-radius:10px;background:#f3f3f3;font-size:.82rem}
+.tax-summary strong{white-space:nowrap}
+.bestday-status{margin-top:12px;padding:12px 13px;border-left:3px solid #bbb;background:#fafafa;border-radius:6px;font-size:.75rem;line-height:1.45}
+.bestday-status p{margin:5px 0 0;opacity:.72}
+</style>
+
 </head>
 <body>
 <header class="hero"><div class="sparkles"></div><div class="container hero-content">
@@ -273,376 +285,493 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 </div>
 </section>
 
+
 <section id="presupuesto-hoteles" class="budget-section">
   <div class="budget-intro">
     <h1>Hoteles · presupuesto completo</h1>
     <p>6–8 de noviembre de 2026 · 6 personas · 2 noches</p>
     <div class="assumption-pills">
       <span>TC: $18.50 MXN/USD</span>
-      <span>Impuesto estimado: 13.38%</span>
-      <span>Resort fee incluido en el cálculo</span>
+      <span>Referencia fiscal: 13.38%</span>
+      <span>Escenario conservador</span>
     </div>
   </div>
+
+  <div class="clarity-box">
+    <strong>Importante sobre BestDay</strong>
+    <p>La cotización de BestDay se conserva exactamente como precio base. El resort fee se muestra aparte. También separamos el impuesto calculado sobre el resort fee y una reserva para el impuesto local del hospedaje. Esta última se incluye en el presupuesto conservador únicamente para evitar faltantes: si BestDay ya la cobró dentro de la reserva, ese dinero quedaría como margen y el costo real sería menor.</p>
+  </div>
+
   <div class="hotel-grid">
     
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Silver Sevens</h2>
-          <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Silver Sevens</h2>
+      <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$6,096 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$41.00 × 2 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$41.00 × 2 hab. × 2 noches</small></span>
           <strong>$3,034 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$406 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$816 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$1,222 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$1,222 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$10,352 MXN</strong>
         </div>
         <div class="total-person">≈ $1,725 MXN por persona</div>
         <div class="total-usd">≈ US$560 total · ≈ US$93 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Silver Sevens</h2>
-          <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Silver Sevens</h2>
+      <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$8,086 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$41.00 × 3 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$41.00 × 3 hab. × 2 noches</small></span>
           <strong>$4,551 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$609 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$1,082 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$1,691 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$1,691 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$14,328 MXN</strong>
         </div>
         <div class="total-person">≈ $2,388 MXN por persona</div>
         <div class="total-usd">≈ US$774 total · ≈ US$129 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Circus Circus</h2>
-          <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Circus Circus</h2>
+      <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$8,448 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$45.00 × 2 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$45.00 × 2 hab. × 2 noches</small></span>
           <strong>$3,330 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$446 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$1,130 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$1,576 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$1,576 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$13,354 MXN</strong>
         </div>
         <div class="total-person">≈ $2,226 MXN por persona</div>
         <div class="total-usd">≈ US$722 total · ≈ US$120 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Treasure Island</h2>
-          <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Treasure Island</h2>
+      <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$11,426 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$49.95 × 3 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$49.95 × 3 hab. × 2 noches</small></span>
           <strong>$5,544 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$742 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$1,529 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,271 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,271 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$19,241 MXN</strong>
         </div>
         <div class="total-person">≈ $3,207 MXN por persona</div>
         <div class="total-usd">≈ US$1,040 total · ≈ US$173 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>SAHARA Las Vegas</h2>
-          <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>SAHARA Las Vegas</h2>
+      <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$11,460 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$54.95 × 2 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$54.95 × 2 hab. × 2 noches</small></span>
           <strong>$4,066 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$544 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$1,533 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,077 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,077 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$17,604 MXN</strong>
         </div>
         <div class="total-person">≈ $2,934 MXN por persona</div>
         <div class="total-usd">≈ US$952 total · ≈ US$159 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Tuscany Suites</h2>
-          <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Tuscany Suites</h2>
+      <div class="hotel-meta">2 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$12,762 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$45.00 × 2 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$45.00 × 2 hab. × 2 noches</small></span>
           <strong>$3,330 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$446 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$1,708 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,153 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,153 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$18,245 MXN</strong>
         </div>
         <div class="total-person">≈ $3,041 MXN por persona</div>
         <div class="total-usd">≈ US$986 total · ≈ US$164 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>Luxor</h2>
-          <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>Luxor</h2>
+      <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$15,377 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$45.00 × 3 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$45.00 × 3 hab. × 2 noches</small></span>
           <strong>$4,995 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$668 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$2,057 MXN</strong>
+        </div>
+
         <div class="price-row">
-          <span>Estacionamiento<small>US$20 por noche · 1 vehículo</small></span>
+          <span>Estacionamiento<small>US$20/noche · 1 vehículo</small></span>
           <strong>$740 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,726 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,726 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$23,838 MXN</strong>
         </div>
         <div class="total-person">≈ $3,973 MXN por persona</div>
         <div class="total-usd">≈ US$1,289 total · ≈ US$215 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>The Lexi</h2>
-          <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>The Lexi</h2>
+      <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$15,975 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$30.00 × 3 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$30.00 × 3 hab. × 2 noches</small></span>
           <strong>$3,330 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$446 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$2,137 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,583 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,583 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$21,888 MXN</strong>
         </div>
         <div class="total-person">≈ $3,648 MXN por persona</div>
         <div class="total-usd">≈ US$1,183 total · ≈ US$197 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
-
     <article class="hotel-card">
-      <div class="hotel-title-row">
-        <div>
-          <h2>SAHARA Las Vegas</h2>
-          <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
-        </div>
-      </div>
+      <h2>SAHARA Las Vegas</h2>
+      <div class="hotel-meta">3 habitaciones · 6 personas · 2 noches</div>
 
       <div class="price-breakdown">
         <div class="price-row">
-          <span>Cotización BestDay<small>Precio base usado para el presupuesto</small></span>
+          <span>Cotización BestDay<small>Importe de la cotización original</small></span>
           <strong>$15,982 MXN</strong>
         </div>
-        <div class="price-row">
-          <span>Resort fee<small>US$54.95 × 3 hab. × 2 noches</small></span>
+
+        <div class="price-row fee-row">
+          <span>Resort fee estimado<small>US$54.95 × 3 hab. × 2 noches</small></span>
           <strong>$6,099 MXN</strong>
         </div>
+
+        <div class="price-row tax-row">
+          <span>Impuesto sobre resort fee<small>13.38% del resort fee estimado</small></span>
+          <strong>$816 MXN</strong>
+        </div>
+
+        <div class="price-row tax-row">
+          <span>Reserva para impuesto local del hospedaje<small>13.38% de la cotización BestDay · solo aplicaría adicionalmente si BestDay no lo incluyó</small></span>
+          <strong>$2,138 MXN</strong>
+        </div>
+
         <div class="price-row">
           <span>Estacionamiento<small>Gratis</small></span>
           <strong>Gratis</strong>
         </div>
-        <div class="price-row">
-          <span>Impuestos estimados<small>13.38% sobre hospedaje + resort fee</small></span>
-          <strong>$2,954 MXN</strong>
-        </div>
+      </div>
+
+      <div class="tax-summary">
+        <span>Impuestos reservados en el escenario conservador</span>
+        <strong>$2,954 MXN</strong>
       </div>
 
       <div class="estimated-total">
         <div class="total-main">
-          <span>PRESUPUESTO ESTIMADO</span>
+          <span>PRESUPUESTO CONSERVADOR</span>
           <strong>$25,036 MXN</strong>
         </div>
         <div class="total-person">≈ $4,173 MXN por persona</div>
         <div class="total-usd">≈ US$1,353 total · ≈ US$226 por persona</div>
       </div>
-      <p class="budget-note">Presupuesto conservador con TC fijo de $18.50 MXN/USD. BestDay podría ya incluir algunos impuestos o cargos; si es así, el total real sería menor.</p>
+
+      <div class="bestday-status">
+        <strong>¿Qué podría ya venir incluido en BestDay?</strong>
+        <p>No es posible confirmarlo únicamente desde la ficha pública de esta cotización. BestDay indica que pueden existir impuestos locales, resort fees u otros cargos pagaderos directamente en destino. Por eso este total conserva una reserva adicional del 13.38% sobre el hospedaje.</p>
+      </div>
     </article>
     
   </div>
+
   <div class="method-note">
-    <strong>Cómo leer estos totales:</strong> Cotización BestDay + resort fee + estacionamiento + impuestos estimados.
-    El objetivo es llevar un presupuesto conservador para reducir sorpresas al llegar. Los depósitos reembolsables por incidentales no están incluidos como gasto.
+    <strong>Fórmula del escenario conservador:</strong><br>
+    BestDay + resort fee + impuesto del resort fee + reserva de impuesto local del hospedaje + estacionamiento.
+    Los depósitos reembolsables para incidentales no se consideran gasto.
   </div>
 </section>
 
-</main>
 <footer><div class="container">🎰 Las Vegas Girls Trip 2026 · 6–8 noviembre · 6 personas<br><br>Precios basados en las cotizaciones originales de BestDay · T.C. de referencia: $18.50 MXN/USD</div></footer>
 
 <script>
