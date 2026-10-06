@@ -34,6 +34,55 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 .people-cost span{display:block;font-size:10px;opacity:.62;margin-bottom:3px}
 .people-cost b{font-size:13px}
 @media(max-width:650px){.people-cost{grid-template-columns:1fr}.final-total strong{font-size:24px}}
+
+/* Corrección de encabezados de tarjetas */
+.today-card .hotel-top{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto !important;
+  align-items:start !important;
+  gap:12px !important;
+  margin-bottom:10px !important;
+}
+.today-card .hotel-top > div:first-child{
+  min-width:0 !important;
+}
+.today-card .source-label{
+  position:static !important;
+  display:block !important;
+  margin:0 0 6px 0 !important;
+  padding:0 !important;
+  line-height:1.2 !important;
+  font-size:10px !important;
+  letter-spacing:.11em !important;
+  overflow:visible !important;
+}
+.today-card h3{
+  margin:0 0 8px 0 !important;
+  padding:0 !important;
+  line-height:1.12 !important;
+  overflow-wrap:anywhere !important;
+}
+.today-card .rank{
+  position:static !important;
+  align-self:start !important;
+  justify-self:end !important;
+  margin:0 !important;
+  padding:2px 0 0 8px !important;
+  line-height:1 !important;
+}
+.today-card .highlight{
+  position:static !important;
+  margin:0 !important;
+}
+.today-card .details{
+  clear:both !important;
+  margin-top:12px !important;
+}
+@media(max-width:650px){
+  .today-card .hotel-top{grid-template-columns:minmax(0,1fr) auto !important}
+  .today-card h3{font-size:clamp(22px,7vw,30px) !important}
+}
+
 </style>
 
 
@@ -101,8 +150,7 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 </section>
 
 <section>
-<h2 class="section-title">Nuestras opciones</h2>
-<p class="section-subtitle">Cotizaciones para 6 personas, del 6 al 8 de noviembre de 2026. Los impuestos son una <b>estimación</b> y el resort fee no se suma si la cotización de BestDay no lo desglosa.</p>
+
 <div class="controls">
 <button class="filter active" onclick="filterHotels('all',this)">Todas</button>
 <button class="filter" onclick="filterHotels('cheap',this)">💰 Más económicas</button>
