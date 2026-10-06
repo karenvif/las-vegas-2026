@@ -15,6 +15,25 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 .price-box{margin-top:17px;padding:16px;background:rgba(0,0,0,.2);border-radius:16px}.price-row{display:flex;justify-content:space-between;align-items:center;margin:7px 0;gap:15px}.total{font-size:21px;font-weight:700}.per-person{color:var(--pink);font-weight:700}.grand{border-top:1px solid rgba(255,255,255,.12);padding-top:12px;margin-top:12px}.grand-total{color:var(--gold)}.usd-row{color:#d8c9e3}.usd-row span:last-child{font-weight:700;color:#bda5ff}.rooms{color:var(--muted);font-size:12px;margin-top:9px}.btn{display:block;text-align:center;text-decoration:none;color:white;background:linear-gradient(90deg,var(--pink),#c53dff);padding:13px;border-radius:13px;margin-top:15px;font-weight:700;transition:.2s}.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .note{background:rgba(245,199,107,.08);border:1px solid rgba(245,199,107,.2);border-radius:18px;padding:18px;color:#e9ddc8;font-size:13px;line-height:1.6}footer{border-top:1px solid rgba(255,255,255,.08);padding:35px 0 50px;color:var(--muted);text-align:center;font-size:12px}.hidden{display:none!important}
 @media(max-width:760px){.summary,.hotels{grid-template-columns:1fr}.summary{margin-top:-25px}.hero{min-height:480px}section{padding:25px 0 45px}.section-title{font-size:30px}.hotel-image{height:170px}.price-row{font-size:13px}}
+
+/* Precio simplificado: el total final manda visualmente */
+.price-box.simplified{display:block!important}
+.booking-price,.extra-line{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.booking-price{padding:10px 0 8px;font-size:14px}
+.booking-price span,.extra-line span{opacity:.72}
+.booking-price b{font-size:16px}
+.extras-breakdown{padding:7px 0 10px;border-top:1px solid rgba(255,255,255,.07)}
+.extra-line{padding:4px 0;font-size:13px}
+.extra-line b{font-weight:700}
+.extra-line.included b{color:#8fd8b4}
+.final-total{margin:8px 0 12px;padding:15px 16px;border:1px solid rgba(242,211,107,.45);background:rgba(242,211,107,.07);border-radius:14px}
+.final-total span{display:block;font-size:11px;font-weight:900;letter-spacing:.08em;color:#f2d36b;margin-bottom:4px}
+.final-total strong{display:block;font-size:26px;line-height:1.1;color:#f2d36b}
+.people-cost{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.people-cost div{padding:9px;background:rgba(255,255,255,.035);border-radius:10px}
+.people-cost span{display:block;font-size:10px;opacity:.62;margin-bottom:3px}
+.people-cost b{font-size:13px}
+@media(max-width:650px){.people-cost{grid-template-columns:1fr}.final-total strong{font-size:24px}}
 </style>
 
 
@@ -53,6 +72,21 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 
 </head>
 <body>
+<style>
+/* Ajustes mínimos sobre el diseño original: solo acentos relevantes */
+.today-card{position:relative}
+.today-card .source-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.62;font-weight:800;margin-bottom:4px}
+.today-card .rank{font-weight:900;opacity:.45;font-size:18px}
+.today-card .highlight{display:inline-block;margin:2px 0 10px;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid rgba(255,255,255,.12)}
+.today-card .highlight.best{color:#f2d36b;border-color:rgba(242,211,107,.45);background:rgba(242,211,107,.08)}
+.today-card .highlight.good{color:#8fd8b4;border-color:rgba(143,216,180,.38);background:rgba(143,216,180,.07)}
+.today-card .highlight.warn{color:#ef9d9d;border-color:rgba(239,157,157,.38);background:rgba(239,157,157,.07)}
+.today-card.best{box-shadow:0 0 0 1px rgba(242,211,107,.18)}
+.today-card.warn .fee-warning{border-left:3px solid #ef9d9d;padding-left:9px}
+.today-card.good .fee-warning{border-left:3px solid #8fd8b4;padding-left:9px}
+.today-card.best .grand-total{color:#f2d36b}
+.today-card .usd-row{opacity:.84}
+</style>
 <header class="hero"><div class="sparkles"></div><div class="container hero-content">
 <div class="kicker">Girls Trip · Las Vegas</div><h1>Vegas <span>2026</span> 🎰</h1>
 <p class="subtitle">6–8 de noviembre · 6 personas · 2 noches</p>
@@ -76,428 +110,353 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 <button class="filter" onclick="filterHotels('quality',this)">⭐ Mejor calificadas</button>
 </div>
 <div class="hotels">
-<article class="hotel" data-price="cheap" data-location="offstrip" data-quality="standard" data-quoted="6096" data-parking="0" data-rooms="2">
-  <div class="hotel-image"><div class="hotel-icon">🎰</div><span class="badge green">MEJOR PRECIO</span></div>
-  <div class="hotel-body">
-    <h3>Silver Sevens</h3>
-    <div class="location">📍 Cerca de The LINQ / Sphere</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Fuera del Strip</b></div><div class="detail">💳 Resort fee<b>US$41.00/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$6,096</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$41.00 × 2 hab. × 2 noches</small></span>
-        <span>$3,034</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$406</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$816</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$1,222</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$10,352</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$1,725</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$560</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$93</span></div>
-
-      <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<div class="note today-method"><b>Precios actualizados:</b> esta comparativa usa únicamente las opciones revisadas hoy. MXN es la referencia principal; los USD son <b>costos aproximados</b> calculados con T.C. de $18.00 MXN/USD. El TOTAL FINAL ESTIMADO acumula reservación + tarifas de destino/resort fee + parking y cualquier otro cargo conocido. Los depósitos reembolsables se muestran aparte y no se suman al gasto.</div><article class="hotel today-card best" data-total="8696.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>Silver Sevens Hotel & Casino</h3>
+      <div class="highlight best">💰 Mejor precio</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/416557/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1176064685&amp;searchId=5adcec3d-10e0-46f8-9341-99f4f07957ab&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#1</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
+    <div class="detail">🛌 Camas<b>4 Queen en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$5,370</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $3,326</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$8,696</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$1,449</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$483</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$81</b></div>
+      </div><div class="fee-warning">Tarifas del destino: $3,326 · Parking gratis</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/IeQLvM" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
-<article class="hotel" data-price="cheap" data-location="offstrip" data-quality="standard" data-quoted="8086" data-parking="0" data-rooms="3">
-  <div class="hotel-image"><div class="hotel-icon">🎲</div></div>
-  <div class="hotel-body">
-    <h3>Silver Sevens</h3>
-    <div class="location">📍 Cerca de The LINQ / Sphere</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Fuera del Strip</b></div><div class="detail">💳 Resort fee<b>US$41.00/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$8,086</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$41.00 × 3 hab. × 2 noches</small></span>
-        <span>$4,551</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$609</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$1,082</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$1,691</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$14,328</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$2,388</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$774</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$129</span></div>
-
-      <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card good" data-total="12168.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>Hyatt Place Las Vegas</h3>
+      <div class="highlight good">☕ Desayuno incluido</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/416557/2026-11-06/2026-11-08/3!3?user_searched_gid=CIT_3944&amp;selected_room_pack=2020394738&amp;searchId=432bc416-2d49-47a1-8505-bf8b7010c2fd&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#2</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Double + sofá cama</b></div>
+    <div class="detail">🛌 Camas<b>Configuración para 6</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$11,448</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Parking</span><b>+ $720</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$12,168</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,028</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$676</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$113</b></div>
+      </div><div class="fee-warning">Desayuno incluido · Sin resort fee identificado · Parking aprox. US$20/noche × 2</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/8EMDy8" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
-<article class="hotel" data-price="cheap" data-location="strip" data-quality="standard" data-quoted="8448" data-parking="0" data-rooms="2">
-  <div class="hotel-image"><div class="hotel-icon">🎪</div></div>
-  <div class="hotel-body">
-    <h3>Circus Circus</h3>
-    <div class="location">📍 Las Vegas Strip</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>7.0 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Strip</b></div><div class="detail">🎢 Extra<b>Theme Park</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$8,448</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 2 hab. × 2 noches</small></span>
-        <span>$3,330</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$446</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$1,130</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$1,576</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$13,354</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$2,226</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$722</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$120</span></div>
-
-      <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card good" data-total="13330.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>Westgate Las Vegas Resort & Casino</h3>
+      <div class="highlight good">🚝 Buena conexión</div>
     </div>
-    <a class="btn" href="http://bestday.com.mx/accommodations/detail/270357/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=315423910&amp;searchId=dc9036ca-dcce-4cc7-aa26-66de8835d4fa&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#3</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 Signature Double Double Room</b></div>
+    <div class="detail">🛌 Camas<b>4 camas Double en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$9,234</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $4,096</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$13,330</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,222</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$741</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$123</b></div>
+      </div><div class="fee-warning">Tarifas del destino: $4,096 · Parking gratis</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/21hn4qb" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
-<article class="hotel" data-price="mid" data-location="strip" data-quality="good" data-quoted="11426" data-parking="0" data-rooms="3">
-  <div class="hotel-image"><div class="hotel-icon">🏝️</div><span class="badge gold">TOP PICK</span></div>
-  <div class="hotel-body">
-    <h3>Treasure Island</h3>
-    <div class="location">📍 Las Vegas Strip · Fashion Show Mall</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>8.4 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">📍 Ubicación<b>Excelente</b></div><div class="detail">💳 Resort fee<b>US$49.95/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$11,426</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$49.95 × 3 hab. × 2 noches</small></span>
-        <span>$5,544</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$742</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$1,529</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,271</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$19,241</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$3,207</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$1,040</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$173</span></div>
-
-      <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card neutral" data-total="13836.00" data-source="Airbnb">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">Airbnb</div>
+      <h3>Jockey Club Airbnb · 1 dormitorio Deluxe</h3>
+      <div class="highlight neutral">📍 En el Strip</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/2457529/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1040142138&amp;searchId=95ee21f3-8733-491c-b332-ccb1ca10192e&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#4</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>1 dormitorio · 1.5 baños</b></div>
+    <div class="detail">🛌 Camas<b>3 camas en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>Airbnb</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$13,836</b></div>
+      <div class="extras-breakdown"><div class="extra-line included"><span>Cargos adicionales conocidos</span><b>$0</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$13,836</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,306</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$769</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$128</b></div>
+      </div><div class="fee-warning">Total mostrado por Airbnb</div></div>
+  <a class="btn" href="https://www.airbnb.mx/rooms/563047783187157394" target="_blank" rel="noopener noreferrer">Ver cotización en Airbnb</a>
 </article>
-<article class="hotel" data-price="mid" data-location="strip" data-quality="excellent" data-quoted="11460" data-parking="0" data-rooms="2">
-  <div class="hotel-image"><div class="hotel-icon">✨</div></div>
-  <div class="hotel-body">
-    <h3>SAHARA Las Vegas</h3>
-    <div class="location">📍 Strip · Monorail</div>
-    <div class="rating"><span class="stars">★★★★★</span><strong>8.6 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🚝 Transporte<b>Monorail</b></div><div class="detail">💳 Resort fee<b>US$54.95/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$11,460</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$54.95 × 2 hab. × 2 noches</small></span>
-        <span>$4,066</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$544</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$1,533</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,077</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$17,604</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$2,934</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$952</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$159</span></div>
-
-      <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card best" data-total="15312.00" data-source="Airbnb">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">Airbnb</div>
+      <h3>Jockey Club Airbnb · 2 dormitorios</h3>
+      <div class="highlight best">🛏 Mejor para 6</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/651043/2026-11-06/2026-11-08/3!3?user_searched_gid=CIT_3944&amp;selected_room_pack=2092168877&amp;searchId=13dbb8ce-424d-4354-868e-8d7d0312c3ed&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#5</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 dormitorios · 2 baños</b></div>
+    <div class="detail">🛌 Camas<b>3 camas en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>Airbnb</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$15,312</b></div>
+      <div class="extras-breakdown"><div class="extra-line included"><span>Cargos adicionales conocidos</span><b>$0</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$15,312</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,552</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$851</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$142</b></div>
+      </div><div class="fee-warning">Total mostrado por Airbnb · anuncio indica “Sin tarifas”</div></div>
+  <a class="btn" href="https://www.airbnb.mx/rooms/563047783187157394" target="_blank" rel="noopener noreferrer">Ver cotización en Airbnb</a>
 </article>
-<article class="hotel" data-price="mid" data-location="offstrip" data-quality="best" data-quoted="12762" data-parking="0" data-rooms="2">
-  <div class="hotel-image"><div class="hotel-icon">🌴</div><span class="badge gold">MEJOR CALIFICADO</span></div>
-  <div class="hotel-body">
-    <h3>Tuscany Suites</h3>
-    <div class="location">📍 Cerca del Strip</div>
-    <div class="rating"><span class="stars">★★★★★</span><strong>9.2 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>2</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🏠 Tipo<b>Suites</b></div><div class="detail">💳 Resort fee<b>US$45.00/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$12,762</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 2 hab. × 2 noches</small></span>
-        <span>$3,330</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$446</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$1,708</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,153</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$18,245</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$3,041</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$986</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$164</span></div>
-
-      <div class="rooms">2 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card best" data-total="15360.69" data-source="Booking">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">Booking</div>
+      <h3>Desert Rose Resort</h3>
+      <div class="highlight best">🏡 Buena distribución</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/312474/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1722588014&amp;searchId=ea5d5bac-c3e5-4ddd-bfca-6c0dacc3cab8&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#6</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 suites de 1 dormitorio</b></div>
+    <div class="detail">🛌 Camas<b>1 King + sofá cama por suite</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>Booking</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$13,548</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $1,813</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$15,361</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,560</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$853</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$142</b></div>
+      </div><div class="fee-warning">Impuestos/cargos: $1,812.69 · Sin resort fee · Parking gratis</div></div>
+  <a class="btn" href="https://www.booking.com/Share-Ckawmi8" target="_blank" rel="noopener noreferrer">Ver cotización en Booking</a>
 </article>
-<article class="hotel" data-price="expensive" data-location="strip" data-quality="good" data-quoted="15377" data-parking="20" data-rooms="3">
-  <div class="hotel-image"><div class="hotel-icon">🔺</div></div>
-  <div class="hotel-body">
-    <h3>Luxor</h3>
-    <div class="location">📍 Las Vegas Strip</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>7.8 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>$20 USD/noche</b></div><div class="detail">📍 Ubicación<b>Strip</b></div><div class="detail">💳 Resort fee<b>US$45.00/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,377</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$45.00 × 3 hab. × 2 noches</small></span>
-        <span>$4,995</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$668</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$2,057</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,726</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small>1 vehículo</small></span>
-        <span>US$20</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$740</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$23,838</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$3,973</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$1,289</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$215</span></div>
-
-      <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card neutral" data-total="16385.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>Tuscany Suites & Casino</h3>
+      <div class="highlight neutral">Cargos claros</div>
     </div>
-    <a class="btn" href="http://bestday.com.mx/accommodations/detail/269312/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1859630021&amp;searchId=681806f7-04f9-43c4-b1ba-72e785c23a38&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#7</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>Habitaciones dobles</b></div>
+    <div class="detail">🛌 Camas<b>Opción doble seleccionada</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$12,696</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $3,689</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$16,385</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,731</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$910</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$152</b></div>
+      </div><div class="fee-warning">Destino: $3,689 = impuesto municipal $435 + resort fee $3,253</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/t1Wf0OF" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
-<article class="hotel" data-price="expensive" data-location="offstrip" data-quality="standard" data-quoted="15975" data-parking="0" data-rooms="3">
-  <div class="hotel-image"><div class="hotel-icon">🖤</div><span class="badge ">ADULTS ONLY</span></div>
-  <div class="hotel-body">
-    <h3>The Lexi</h3>
-    <div class="location">📍 Fuera del Strip</div>
-    <div class="rating"><span class="stars">★★★★</span><strong>7.4 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🔞 Concepto<b>Adults only</b></div><div class="detail">🏊 Alberca<b>Exterior</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,975</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$30.00 × 3 hab. × 2 noches</small></span>
-        <span>$3,330</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$446</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$2,137</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,583</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$21,888</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$3,648</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$1,183</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$197</span></div>
-
-      <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card best" data-total="16497.90" data-source="Booking">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">Booking</div>
+      <h3>Jockey Resort Suites Center Strip</h3>
+      <div class="highlight best">📍 Mejor ubicación</div>
     </div>
-    <a class="btn" href="http://bestday.com.mx/accommodations/detail/456935/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=1519602105&amp;searchId=0034d430-acc4-4375-a99c-376e1ba64581&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#8</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>Suite seleccionada para 6</b></div>
+    <div class="detail">🛌 Camas<b>Center Strip</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>Booking</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$14,551</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $1,947</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$16,498</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,750</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$917</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$153</b></div>
+      </div><div class="fee-warning">Impuestos/cargos: $1,946.90 · Sin resort fee · Parking designado</div></div>
+  <a class="btn" href="https://www.booking.com/Share-sFiMQb" target="_blank" rel="noopener noreferrer">Ver cotización en Booking</a>
 </article>
-<article class="hotel" data-price="expensive" data-location="strip" data-quality="excellent" data-quoted="15982" data-parking="0" data-rooms="3">
-  <div class="hotel-image"><div class="hotel-icon">💎</div></div>
-  <div class="hotel-body">
-    <h3>SAHARA Las Vegas</h3>
-    <div class="location">📍 Strip · Monorail</div>
-    <div class="rating"><span class="stars">★★★★★</span><strong>8.6 / 10</strong></div>
-    <div class="details"><div class="detail">🛏️ Habitaciones<b>3</b></div><div class="detail">🚗 Parking<b>Gratis</b></div><div class="detail">🚝 Transporte<b>Monorail</b></div><div class="detail">💳 Resort fee<b>US$54.95/hab./noche</b></div></div>
-    <div class="price-box">
-      <div class="price-row"><span>Precio cotizado en BestDay</span><span class="total quoted">$15,982</span></div>
-
-      <div class="price-row fee-detail">
-        <span>Resort fee · estimado a pagar en hotel<small>US$54.95 × 3 hab. × 2 noches</small></span>
-        <span>$6,099</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local sobre resort fee<small>13.38% del resort fee</small></span>
-        <span>$816</span>
-      </div>
-
-      <div class="price-row tax-detail">
-        <span>Impuesto local del hospedaje · reserva<small>13.38% del precio BestDay · se reserva solo por precaución</small></span>
-        <span>$2,138</span>
-      </div>
-
-      <div class="price-row tax-subtotal">
-        <span>Total reservado para impuestos</span>
-        <span>$2,954</span>
-      </div>
-
-      <div class="price-row">
-        <span>Parking · por noche<small></small></span>
-        <span>Gratis</span>
-      </div>
-      <div class="price-row"><span>Parking · 2 noches</span><span>$0</span></div>
-
-      <div class="price-row grand"><span>Presupuesto conservador</span><span class="total grand-total">$25,036</span></div>
-      <div class="price-row"><span>Por persona</span><span class="per-person per-mxn">$4,173</span></div>
-      <div class="price-row usd-row"><span>≈ Total USD</span><span class="usd-total">US$1,353</span></div>
-      <div class="price-row usd-row"><span>≈ USD por persona</span><span class="usd-person">US$226</span></div>
-
-      <div class="rooms">3 habitaciones · 6 personas · 2 noches</div>
-      <div class="fee-warning">* El total es conservador. Si BestDay ya cobró el impuesto local del hospedaje, ese importe no se pagaría nuevamente y el costo final sería menor.</div>
+<article class="hotel today-card good" data-total="17356.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>SAHARA Las Vegas · opción 1</h3>
+      <div class="highlight good">Parking gratis</div>
     </div>
-    <a class="btn" href="https://www.bestday.com.mx/accommodations/detail/651043/2026-11-06/2026-11-08/2!2!2?user_searched_gid=CIT_3944&amp;selected_room_pack=2106050918&amp;searchId=642ebb7b-8bf7-487c-9983-b33841388ff8&amp;throughResults=true&amp;fromViewMode=list&amp;isMapCommanding=false&amp;currency=MXN" target="_blank" rel="noopener">Ver oferta en BestDay →</a>
+    <div class="rank">#9</div>
   </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
+    <div class="detail">🛌 Camas<b>4 Queen en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$12,852</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $4,504</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$17,356</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,893</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$964</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$161</b></div>
+      </div><div class="fee-warning">Tarifas del destino: $4,504 · Parking y valet gratis</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/x1wnOKs" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
+</article>
+<article class="hotel today-card good" data-total="17618.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>SAHARA Las Vegas · opción 2</h3>
+      <div class="highlight good">Parking gratis</div>
+    </div>
+    <div class="rank">#10</div>
+  </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
+    <div class="detail">🛌 Camas<b>4 Queen en total</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$13,524</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $4,094</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$17,618</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,936</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$979</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$163</b></div>
+      </div><div class="fee-warning">Destino: $4,094 = impuesto municipal $483 + resort fee $3,611 · Parking gratis</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/j3TXwu" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
+</article>
+<article class="hotel today-card warn" data-total="17823.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>Luxor Hotel & Casino</h3>
+      <div class="highlight warn">⚠ Parking aparte</div>
+    </div>
+    <div class="rank">#11</div>
+  </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>2 Queen por habitación</b></div>
+    <div class="detail">🛌 Camas<b>Opción 2 Queen seleccionada</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$14,136</b></div>
+      <div class="extras-breakdown"><div class="extra-line"><span>Tarifas / cargos adicionales</span><b>+ $3,687</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$17,823</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$2,970</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$990</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$165</b></div>
+      </div><div class="fee-warning">Resort fee: $3,687 · Parking de pago NO incluido</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/u1PFurP" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
+</article>
+<article class="hotel today-card good" data-total="18684.00" data-source="BestDay">
+  <div class="hotel-top">
+    <div>
+      <div class="source-label">BestDay</div>
+      <h3>StripViewSuites at Signature</h3>
+      <div class="highlight good">Sin resort fee</div>
+    </div>
+    <div class="rank">#12</div>
+  </div>
+  <div class="details">
+    <div class="detail">🛏️ Habitación<b>Primera opción seleccionada</b></div>
+    <div class="detail">🛌 Camas<b>Suite para 6</b></div>
+    <div class="detail">👥 Viajeras<b>6 personas · 2 noches</b></div>
+    <div class="detail">💳 Fuente<b>BestDay</b></div>
+  </div>
+  <div class="price-box simplified">
+      <div class="booking-price"><span>Reservación</span><b>$18,684</b></div>
+      <div class="extras-breakdown"><div class="extra-line included"><span>Cargos adicionales conocidos</span><b>$0</b></div></div>
+      <div class="final-total">
+        <span>TOTAL FINAL ESTIMADO</span>
+        <strong>$18,684</strong>
+      </div>
+      <div class="people-cost">
+        <div><span>Por persona</span><b>$3,114</b></div>
+        <div><span>Costo aproximado en USD</span><b>≈ US$1,038</b></div>
+        <div><span>Aprox. USD por persona</span><b>≈ US$173</b></div>
+      </div><div class="fee-warning">Sin resort fee · Valet gratis para 1 vehículo sujeto a disponibilidad</div></div>
+  <a class="btn" href="https://mobile-wl.bestday.com.mx/f/A1EnZs" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article></div>
 </section>
 
