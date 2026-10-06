@@ -83,6 +83,54 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   .today-card h3{font-size:clamp(22px,7vw,30px) !important}
 }
 
+
+/* FIX definitivo del encabezado: nuevas clases, sin reglas heredadas */
+.today-card .kv-cardhead{
+ position:relative!important; display:grid!important;
+ grid-template-columns:minmax(0,1fr) 40px!important;
+ column-gap:12px!important; align-items:start!important;
+ width:100%!important; padding:16px 16px 12px!important;
+ margin:0!important; overflow:visible!important;
+}
+.today-card .kv-cardhead>div:first-child{position:static!important;min-width:0!important;margin:0!important;padding:0!important}
+.today-card .kv-source{
+ position:static!important;display:block!important;
+ margin:0 0 7px!important;padding:0!important;
+ font-size:10px!important;line-height:12px!important;
+ letter-spacing:.12em!important;text-transform:uppercase!important;
+ font-weight:800!important;opacity:.65!important;
+}
+.today-card .kv-cardhead h3{
+ position:static!important;display:block!important;
+ margin:0 0 9px!important;padding:0!important;
+ line-height:1.12!important;overflow:visible!important;
+ max-width:100%!important;
+}
+.today-card .kv-badge{
+ position:static!important;display:inline-block!important;
+ margin:0!important;padding:5px 9px!important;
+ border-radius:999px!important;font-size:12px!important;
+ line-height:16px!important;font-weight:800!important;
+ border:1px solid rgba(255,255,255,.12)!important;
+}
+.today-card .kv-badge.best{color:#f2d36b!important;border-color:rgba(242,211,107,.45)!important;background:rgba(242,211,107,.08)!important}
+.today-card .kv-badge.good{color:#8fd8b4!important;border-color:rgba(143,216,180,.38)!important;background:rgba(143,216,180,.07)!important}
+.today-card .kv-badge.warn{color:#ef9d9d!important;border-color:rgba(239,157,157,.38)!important;background:rgba(239,157,157,.07)!important}
+.today-card .kv-rank{
+ position:static!important;display:block!important;
+ justify-self:end!important;align-self:start!important;
+ margin:0!important;padding:1px 0 0!important;
+ width:auto!important;height:auto!important;
+ font-size:16px!important;line-height:18px!important;
+ font-weight:900!important;opacity:.48!important;
+ white-space:nowrap!important;
+}
+.today-card .details{margin-top:4px!important}
+@media(max-width:650px){
+ .today-card .kv-cardhead{grid-template-columns:minmax(0,1fr) 34px!important;padding:15px 12px 10px!important}
+ .today-card .kv-cardhead h3{font-size:clamp(22px,7vw,29px)!important}
+}
+
 </style>
 
 
@@ -159,13 +207,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
 </div>
 <div class="hotels">
 <div class="note today-method"><b>Precios actualizados:</b> esta comparativa usa únicamente las opciones revisadas hoy. MXN es la referencia principal; los USD son <b>costos aproximados</b> calculados con T.C. de $18.00 MXN/USD. El TOTAL FINAL ESTIMADO acumula reservación + tarifas de destino/resort fee + parking y cualquier otro cargo conocido. Los depósitos reembolsables se muestran aparte y no se suman al gasto.</div><article class="hotel today-card best" data-total="8696.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>Silver Sevens Hotel & Casino</h3>
-      <div class="highlight best">💰 Mejor precio</div>
+      <div class="kv-badge best">💰 Mejor precio</div>
     </div>
-    <div class="rank">#1</div>
+    <div class="kv-rank">#1</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
@@ -188,13 +236,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/IeQLvM" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card good" data-total="12168.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>Hyatt Place Las Vegas</h3>
-      <div class="highlight good">☕ Desayuno incluido</div>
+      <div class="kv-badge good">☕ Desayuno incluido</div>
     </div>
-    <div class="rank">#2</div>
+    <div class="kv-rank">#2</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Double + sofá cama</b></div>
@@ -217,13 +265,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/8EMDy8" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card good" data-total="13330.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>Westgate Las Vegas Resort & Casino</h3>
-      <div class="highlight good">🚝 Buena conexión</div>
+      <div class="kv-badge good">🚝 Buena conexión</div>
     </div>
-    <div class="rank">#3</div>
+    <div class="kv-rank">#3</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 Signature Double Double Room</b></div>
@@ -246,13 +294,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/21hn4qb" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card neutral" data-total="13836.00" data-source="Airbnb">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">Airbnb</div>
+      <div class="kv-source">Airbnb</div>
       <h3>Jockey Club Airbnb · 1 dormitorio Deluxe</h3>
-      <div class="highlight neutral">📍 En el Strip</div>
+      <div class="kv-badge neutral">📍 En el Strip</div>
     </div>
-    <div class="rank">#4</div>
+    <div class="kv-rank">#4</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>1 dormitorio · 1.5 baños</b></div>
@@ -275,13 +323,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://www.airbnb.mx/rooms/563047783187157394" target="_blank" rel="noopener noreferrer">Ver cotización en Airbnb</a>
 </article>
 <article class="hotel today-card best" data-total="15312.00" data-source="Airbnb">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">Airbnb</div>
+      <div class="kv-source">Airbnb</div>
       <h3>Jockey Club Airbnb · 2 dormitorios</h3>
-      <div class="highlight best">🛏 Mejor para 6</div>
+      <div class="kv-badge best">🛏 Mejor para 6</div>
     </div>
-    <div class="rank">#5</div>
+    <div class="kv-rank">#5</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 dormitorios · 2 baños</b></div>
@@ -304,13 +352,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://www.airbnb.mx/rooms/563047783187157394" target="_blank" rel="noopener noreferrer">Ver cotización en Airbnb</a>
 </article>
 <article class="hotel today-card best" data-total="15360.69" data-source="Booking">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">Booking</div>
+      <div class="kv-source">Booking</div>
       <h3>Desert Rose Resort</h3>
-      <div class="highlight best">🏡 Buena distribución</div>
+      <div class="kv-badge best">🏡 Buena distribución</div>
     </div>
-    <div class="rank">#6</div>
+    <div class="kv-rank">#6</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 suites de 1 dormitorio</b></div>
@@ -333,13 +381,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://www.booking.com/Share-Ckawmi8" target="_blank" rel="noopener noreferrer">Ver cotización en Booking</a>
 </article>
 <article class="hotel today-card neutral" data-total="16385.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>Tuscany Suites & Casino</h3>
-      <div class="highlight neutral">Cargos claros</div>
+      <div class="kv-badge neutral">Cargos claros</div>
     </div>
-    <div class="rank">#7</div>
+    <div class="kv-rank">#7</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>Habitaciones dobles</b></div>
@@ -362,13 +410,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/t1Wf0OF" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card best" data-total="16497.90" data-source="Booking">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">Booking</div>
+      <div class="kv-source">Booking</div>
       <h3>Jockey Resort Suites Center Strip</h3>
-      <div class="highlight best">📍 Mejor ubicación</div>
+      <div class="kv-badge best">📍 Mejor ubicación</div>
     </div>
-    <div class="rank">#8</div>
+    <div class="kv-rank">#8</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>Suite seleccionada para 6</b></div>
@@ -391,13 +439,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://www.booking.com/Share-sFiMQb" target="_blank" rel="noopener noreferrer">Ver cotización en Booking</a>
 </article>
 <article class="hotel today-card good" data-total="17356.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>SAHARA Las Vegas · opción 1</h3>
-      <div class="highlight good">Parking gratis</div>
+      <div class="kv-badge good">Parking gratis</div>
     </div>
-    <div class="rank">#9</div>
+    <div class="kv-rank">#9</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
@@ -420,13 +468,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/x1wnOKs" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card good" data-total="17618.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>SAHARA Las Vegas · opción 2</h3>
-      <div class="highlight good">Parking gratis</div>
+      <div class="kv-badge good">Parking gratis</div>
     </div>
-    <div class="rank">#10</div>
+    <div class="kv-rank">#10</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 habitaciones · 2 Queen por habitación</b></div>
@@ -449,13 +497,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/j3TXwu" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card warn" data-total="17823.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>Luxor Hotel & Casino</h3>
-      <div class="highlight warn">⚠ Parking aparte</div>
+      <div class="kv-badge warn">⚠ Parking aparte</div>
     </div>
-    <div class="rank">#11</div>
+    <div class="kv-rank">#11</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>2 Queen por habitación</b></div>
@@ -478,13 +526,13 @@ section{padding:28px 0 55px}.section-title{font-family:'Playfair Display',serif;
   <a class="btn" href="https://mobile-wl.bestday.com.mx/f/u1PFurP" target="_blank" rel="noopener noreferrer">Ver cotización en BestDay</a>
 </article>
 <article class="hotel today-card good" data-total="18684.00" data-source="BestDay">
-  <div class="hotel-top">
+  <div class="kv-cardhead">
     <div>
-      <div class="source-label">BestDay</div>
+      <div class="kv-source">BestDay</div>
       <h3>StripViewSuites at Signature</h3>
-      <div class="highlight good">Sin resort fee</div>
+      <div class="kv-badge good">Sin resort fee</div>
     </div>
-    <div class="rank">#12</div>
+    <div class="kv-rank">#12</div>
   </div>
   <div class="details">
     <div class="detail">🛏️ Habitación<b>Primera opción seleccionada</b></div>
